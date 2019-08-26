@@ -1,6 +1,4 @@
 export default {
-  initialColorMode: 'light',
-  useCustomProperties: true,
   breakpoints: ['40em', '56em', '64em'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
@@ -18,6 +16,8 @@ export default {
     body: 1.625,
     heading: 1.25,
   },
+  useCustomProperties: true,
+  initialColorMode: 'light',
   colors: {
     text: '#000',
     background: '#fff',
@@ -30,6 +30,12 @@ export default {
         background: '#000',
         primary: '#0cf',
       },
+    },
+  },
+  buttons: {
+    primary: {
+      color: 'background',
+      bg: 'primary',
     },
   },
   styles: {
@@ -119,6 +125,7 @@ export default {
       },
       img: {
         maxWidth: '100%',
+        height: 'auto',
       },
     },
   },
