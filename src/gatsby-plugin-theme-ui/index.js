@@ -1,5 +1,5 @@
 export default {
-  breakpoints: ['40em', '56em', '64em'],
+  breakpoints: ['40em', '52em', '64em'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     body: 'Poppins, sans-serif',
@@ -23,6 +23,7 @@ export default {
     background: '#fff',
     primary: '#609',
     secondary: '#306',
+    accent: '#609',
     muted: '#f6f6f6',
     modes: {
       dark: {
@@ -36,6 +37,10 @@ export default {
     primary: {
       color: 'background',
       bg: 'primary',
+    },
+    secondary: {
+      color: 'text',
+      bg: 'secondary',
     },
   },
   styles: {

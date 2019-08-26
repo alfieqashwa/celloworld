@@ -1,7 +1,7 @@
-import React from 'react';
+/** @jsx jsx */
 import { Link, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { Styled } from 'theme-ui';
+import { jsx, Styled } from 'theme-ui';
 
 import Layout from '../components/layout';
 
@@ -12,8 +12,8 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout title={siteTitle}>
-      <h1>{post.frontmatter.title}</h1>
-      <p>{post.frontmatter.date}</p>
+      <Styled.h1>{post.frontmatter.title}</Styled.h1>
+      <small>{post.frontmatter.date}</small>
       <MDXRenderer>{post.body}</MDXRenderer>
       <ul
         style={{

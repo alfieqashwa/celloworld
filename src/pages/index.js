@@ -1,6 +1,6 @@
-import React from 'react';
+/** @jsx jsx */
 import { Link, graphql } from 'gatsby';
-import { Styled } from 'theme-ui';
+import { jsx, Styled } from 'theme-ui';
 
 import Layout from '../components/layout';
 
@@ -14,13 +14,13 @@ const BlogIndex = ({ data }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
           <div key={node.fields.slug}>
-            <h3>
+            <Styled.h1>
               <Styled.a as={Link} to={node.fields.slug}>
                 {title}
               </Styled.a>
-            </h3>
+            </Styled.h1>
             <small>{node.frontmatter.date}</small>
-            <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+            <Styled.p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           </div>
         );
       })}
