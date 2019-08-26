@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Layout, Header, Main, Container, Footer } from 'theme-ui';
+import { jsx, Layout, Main, Container, Footer } from 'theme-ui';
+import Header from './header';
 
 export default ({ children }) => (
   <Layout>
