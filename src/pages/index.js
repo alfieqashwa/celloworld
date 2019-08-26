@@ -1,39 +1,52 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-
-export default ({ data }) => {
-  console.log(data);
+const BlogIndex = ({ data }) => {
+  const siteTitle = data.site.siteMetadata.title;
+  const posts = data.allMdx.edges;
 
   return (
-    <Layout>
-      <h1>Blogs</h1>
-      <h4>{data.allMdx.totalCount} Posts</h4>
-      {data.allMdx.edges.map(({ node }) => (
-        <div key={node.id}>
-          <h3>
-            {node.frontmatter.title} <span>- {node.frontmatter.date}</span>
-          </h3>
-          <p>{node.excerpt}</p>
-        </div>
-      ))}
+    <Layout title={siteTitle}>
+      {posts.map(({ node }) => {
+        const title = node.frontmatter.title || node.fields.slug;
+        return (
+          <div key={node.fields.slug}>
+            <h3>
+              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                {title}
+              </Link>
+            </h3>
+            <small>{node.frontmatter.date}</small>
+            <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+          </div>
+        );
+      })}
     </Layout>
   );
 };
 
+export default BlogIndex;
+
 export const query = graphql`
   query {
-    allMdx {
-      totalCount
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       edges {
         node {
           id
+          excerpt
+          fields {
+            slug
+          }
           frontmatter {
             title
             date
           }
-          excerpt
         }
       }
     }

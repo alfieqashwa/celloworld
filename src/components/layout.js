@@ -4,7 +4,7 @@ import { jsx, Layout, Header, Main, Container, Footer } from 'theme-ui';
 export default ({ children }) => (
   <Layout>
     <Header>
-      <Container>Header</Container>
+      <Container>Celloworld</Container>
     </Header>
     <Main>
       <Container>{children}</Container>

@@ -3,7 +3,7 @@ title: My Fist Blog for Testing
 date: 17-08-2019
 ---
 
-# My First Blog
+# TODOS
 
 Hello, World! This is a testing page.
 
@@ -11,11 +11,11 @@ Hello, World! This is a testing page.
 > > Can you do this?
 
 # H1 Celloworld
-# H2 Celloworld
-# H3 Celloworld
-# H4 Celloworld
-# H5 Celloworld
-# H6 Celloworld
+## H2 Celloworld
+### H3 Celloworld
+#### H4 Celloworld
+##### H5 Celloworld
+###### H6 Celloworld
 
 ---
 
@@ -97,6 +97,30 @@ No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
 ```
 
+## React Live
+``` js live
+const Wrapper = ({ children }) => (
+  <div style={{
+    background: 'papayawhip',
+    width: '100%',
+    padding: '2rem'
+  }}>
+    {children}
+  </div>
+)
+
+const Title = () => (
+  <h3 style={{ color: 'palevioletred' }}>
+    Hello World!
+  </h3>
+)
+
+render(
+  <Wrapper>
+    <Title />
+  </Wrapper>
+)
+```
 ---
 
 # Tables
