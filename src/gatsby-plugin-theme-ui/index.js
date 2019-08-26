@@ -97,7 +97,7 @@ export default {
       textDecoration: 'none',
       ':hover': {
         color: 'secondary',
-        textDecoration: 'underline',
+        // textDecoration: 'underline',
       },
       pre: {
         fontFamily: 'monospace',

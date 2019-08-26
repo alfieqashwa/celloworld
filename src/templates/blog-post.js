@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { Styled } from 'theme-ui';
 
 import Layout from '../components/layout';
 
@@ -25,16 +26,16 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       >
         <li>
           {previous && (
-            <Link to={previous.fields.slug} rel="prev">
+            <Styled.a as={Link} to={previous.fields.slug} rel="prev">
               ← {previous.frontmatter.title}
-            </Link>
+            </Styled.a>
           )}
         </li>
         <li>
           {next && (
-            <Link to={next.fields.slug} rel="next">
+            <Styled.a as={Link} to={next.fields.slug} rel="next">
               {next.frontmatter.title} →
-            </Link>
+            </Styled.a>
           )}
         </li>
       </ul>

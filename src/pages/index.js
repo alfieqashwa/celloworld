@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import { Styled } from 'theme-ui';
 
 import Layout from '../components/layout';
 
@@ -14,9 +15,9 @@ const BlogIndex = ({ data }) => {
         return (
           <div key={node.fields.slug}>
             <h3>
-              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+              <Styled.a as={Link} to={node.fields.slug}>
                 {title}
-              </Link>
+              </Styled.a>
             </h3>
             <small>{node.frontmatter.date}</small>
             <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />

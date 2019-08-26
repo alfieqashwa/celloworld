@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { Link } from 'gatsby';
-import { jsx, useColorMode } from 'theme-ui';
+import { jsx, Styled } from 'theme-ui';
 
 import Switch from './switch';
 
@@ -23,20 +23,21 @@ export default props => (
         justifyContent: 'center',
       }}
     >
-      <Link
+      <Styled.a
+        as={Link}
         to="/"
         sx={{
           variant: 'styles.navlink',
           px: 3,
           py: 1,
-          textTransform: 'uppercase',
+          // textTransform: 'uppercase',
           letterSpacing: '0.1em',
-          border: '4px solid',
+          border: '2px solid',
           color: 'primary',
         }}
       >
-        Celloworld
-      </Link>
+        Cello<span style={{ color: 'hotpink' }}>world</span>
+      </Styled.a>
     </div>
     <div
       sx={{
@@ -45,7 +46,8 @@ export default props => (
         justifyContent: 'flex-end',
       }}
     >
-      <Link
+      <Styled.a
+        as={Link}
         to="/notes"
         sx={{
           variant: 'styles.navlink',
@@ -54,7 +56,7 @@ export default props => (
         }}
       >
         Notes
-      </Link>
+      </Styled.a>
     </div>
     <div
       sx={{
