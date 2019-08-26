@@ -23,6 +23,7 @@
     "@emotion/styled": "^10.0.15",
     "@mdx-js/mdx": "^1.3.1",
     "@mdx-js/react": "^1.3.1",
+    "@theme-ui/typography": "^0.2.34",
     "gatsby": "^2.13.82",
     "gatsby-plugin-emotion": "^4.1.4",
     "gatsby-plugin-mdx": "^1.0.31",
@@ -34,6 +35,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-live": "^2.2.0",
-    "theme-ui": "^0.2.36"
+    "theme-ui": "^0.2.36",
+    "typography-theme-wordpress-2016": "^0.16.19"
   }
 }

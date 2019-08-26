@@ -1,4 +1,6 @@
 export default {
+  initialColorMode: 'light',
+  useCustomProperties: true,
   breakpoints: ['40em', '56em', '64em'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
@@ -22,6 +24,13 @@ export default {
     primary: '#609',
     secondary: '#306',
     muted: '#f6f6f6',
+    modes: {
+      dark: {
+        text: '#fff',
+        background: '#000',
+        primary: '#0cf',
+      },
+    },
   },
   styles: {
     root: {
@@ -83,33 +92,34 @@ export default {
       ':hover': {
         color: 'secondary',
         textDecoration: 'underline',
-    },
-    pre: {
-      fontFamily: 'monospace',
-      overflowX: 'auto',
-      code: {
-        color: 'inherit',
       },
-    },
-    code: {
-      fontFamily: 'monospace',
-      fontSize: 'inherit',
-    },
-    table: {
-      width: '100%',
-      borderCollapse: 'separate',
-      borderSpacing: 0,
-    },
-    th: {
-      textAlign: 'left',
-      borderBottomStyle: 'solid',
-    },
-    td: {
-      textAlign: 'left',
-      borderBottomStyle: 'solid',
-    },
-    img: {
-      maxWidth: '100%',
+      pre: {
+        fontFamily: 'monospace',
+        overflowX: 'auto',
+        code: {
+          color: 'inherit',
+        },
+      },
+      code: {
+        fontFamily: 'monospace',
+        fontSize: 'inherit',
+      },
+      table: {
+        width: '100%',
+        borderCollapse: 'separate',
+        borderSpacing: 0,
+      },
+      th: {
+        textAlign: 'left',
+        borderBottomStyle: 'solid',
+      },
+      td: {
+        textAlign: 'left',
+        borderBottomStyle: 'solid',
+      },
+      img: {
+        maxWidth: '100%',
+      },
     },
   },
 };
