@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Styled, Layout, Main, Container, Footer } from 'theme-ui';
-import { Global } from '@emotion/core';
+import { css, Global } from '@emotion/core';
 
 import Header from './header';
 
@@ -21,7 +21,15 @@ export default props => (
         <Container>Celloworld</Container>
       </Header>
       <Main>
-        <Container>{props.children}</Container>
+        <Container
+          css={css({
+            mx: `auto`,
+            px: 3,
+            py: 4,
+          })}
+        >
+          {props.children}
+        </Container>
       </Main>
       <Footer>Celloworld @2019</Footer>
     </Layout>
