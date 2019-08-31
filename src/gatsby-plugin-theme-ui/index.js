@@ -1,10 +1,21 @@
-export default {
+import merge from 'deepmerge';
+import typography from './typography';
+import colors from './colors';
+import styles from './styles';
+import prism from './prism';
+
+export default merge(typography, {
+  initialColorMode: `light`,
+  colors,
   breakpoints: ['40em', '52em', '64em'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
-    body: 'Poppins, sans-serif',
-    heading: 'Poppins, sans-serif',
+    heading: 'Montserrat, sans-serif',
+    body: 'Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace',
     monospace: 'Menlo, monospace',
+  },
+  sizes: {
+    container: 672,
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
@@ -18,120 +29,6 @@ export default {
   },
   useCustomProperties: true,
   initialColorMode: 'light',
-  colors: {
-    text: '#000',
-    background: '#fff',
-    primary: '#609',
-    secondary: '#306',
-    accent: '#609',
-    muted: '#f6f6f6',
-    modes: {
-      dark: {
-        text: '#fff',
-        background: '#000',
-        primary: '#0cf',
-      },
-    },
-  },
-  buttons: {
-    primary: {
-      color: 'background',
-      bg: 'primary',
-    },
-    secondary: {
-      color: 'text',
-      bg: 'secondary',
-    },
-  },
-  styles: {
-    root: {
-      fontFamily: 'body',
-      lineHeight: 'body',
-      fontWeight: 'body',
-    },
-    h1: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: '1.2',
-      fontWeight: 'heading',
-      fontSize: 5,
-    },
-    h2: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: '1.2',
-      fontWeight: 'heading',
-      fontSize: 4,
-    },
-    h3: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: '1.2',
-      fontWeight: 'heading',
-      fontSize: 3,
-    },
-    h4: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: '1.2',
-      fontWeight: 'heading',
-      fontSize: 2,
-    },
-    h5: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: '1.2',
-      fontWeight: 'heading',
-      fontSize: 1,
-    },
-    h6: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: '1.2',
-      fontWeight: 'heading',
-      fontSize: 0,
-    },
-    p: {
-      color: 'text',
-      fontFamily: 'body',
-      fontWeight: 'body',
-      lineHeight: 'body',
-    },
-    a: {
-      color: 'primary',
-      textDecoration: 'none',
-      ':hover': {
-        color: 'secondary',
-        // textDecoration: 'underline',
-      },
-      pre: {
-        fontFamily: 'monospace',
-        overflowX: 'auto',
-        code: {
-          color: 'inherit',
-        },
-      },
-      code: {
-        fontFamily: 'monospace',
-        fontSize: 'inherit',
-      },
-      table: {
-        width: '100%',
-        borderCollapse: 'separate',
-        borderSpacing: 0,
-      },
-      th: {
-        textAlign: 'left',
-        borderBottomStyle: 'solid',
-      },
-      td: {
-        textAlign: 'left',
-        borderBottomStyle: 'solid',
-      },
-      img: {
-        maxWidth: '100%',
-        height: 'auto',
-      },
-    },
-  },
-};
+  styles,
+  prism,
+});
