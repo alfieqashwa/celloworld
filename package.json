@@ -30,7 +30,7 @@
     "gatsby-plugin-mdx": "^1.0.31",
     "gatsby-plugin-theme-ui": "^0.2.34",
     "gatsby-source-filesystem": "^2.1.18",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "mdx-utils": "^0.2.0",
     "prism-react-renderer": "^0.1.7",
     "react": "^16.9.0",
